@@ -166,4 +166,10 @@ describe XPath::HTML do
       all('h1').last.should == 'id-contenteditable-h1'
     end
   end
+
+  describe "#optgroup" do
+    subject { :optgroup }
+
+    it("finds optgroups by label") { get('Group A').should == 'optgroup-a' }
+  end
 end
